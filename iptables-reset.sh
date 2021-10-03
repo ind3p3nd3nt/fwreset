@@ -13,6 +13,6 @@ iptables -F LOCALOUTPUT;
 iptables -F INVDROP;
 iptables -X;
 iptables -Z;
-iptables -A OUTPUT -p tcp ACCEPT;
-iptables -A INPUT -p tcp ACCEPT;
+iptables -A OUTPUT -p tcp -j ACCEPT;
+iptables -A INPUT -p tcp -j ACCEPT;
 iptables-save;
